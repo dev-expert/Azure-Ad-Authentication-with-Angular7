@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h3>
+  Azure AD authentication app
+</h3>
+
+<h3 *ngIf="adalService.userInfo">
+  Welcome {{userDisplayName}}
+  <p> <button (click)="adalService.logout()">Logout </button></p>
+</h3>
+
+<h3 *ngIf="!adalService.userInfo">
+  <button (click)="adalService.login()"> Login </button>
+</h3>
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<br />
+<footer>
+  © 2019 | Appwrk IT Solutions
+</footer>
